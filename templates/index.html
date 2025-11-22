@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon.com - Online Shopping</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="/">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
+                    </a>
+                </div>
+
+                <!-- Delivery Location -->
+                <div class="deliver-to">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <span class="small">Deliver to</span>
+                        <strong>New York 10001</strong>
+                    </div>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <select id="searchCategory">
+                        <option value="">All</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Fashion">Fashion</option>
+                        <option value="Home & Kitchen">Home & Kitchen</option>
+                        <option value="Smart Home">Smart Home</option>
+                        <option value="Computers">Computers</option>
+                        <option value="Gaming">Gaming</option>
+                    </select>
+                    <input type="text" id="searchInput" placeholder="Search Amazon">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+
+                <!-- Right Side -->
+                <div class="header-right">
+                    <!-- Language -->
+                    <div class="header-option">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" alt="US" style="width: 20px; margin-right: 5px;">
+                        <span>EN</span>
+                    </div>
+
+                    <!-- Account -->
+                    <div class="header-option">
+                        <span class="small">Hello, Sign in</span>
+                        <strong>Account & Lists</strong>
+                    </div>
+
+                    <!-- Returns -->
+                    <div class="header-option">
+                        <span class="small">Returns</span>
+                        <strong>& Orders</strong>
+                    </div>
+
+                    <!-- Cart -->
+                    <div class="cart" id="cartButton">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                        <strong>Cart</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="#"><i class="fas fa-bars"></i> All</a></li>
+                    <li><a href="#">Today's Deals</a></li>
+                    <li><a href="#">Customer Service</a></li>
+                    <li><a href="#">Registry</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                    <li><a href="#">Sell</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=1200" alt="Hero">
+        </div>
+    </section>
+
+    <!-- Category Cards -->
+    <section class="category-section">
+        <div class="container">
+            <div class="category-grid">
+                <div class="category-card">
+                    <h3>Gaming accessories</h3>
+                    <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=300" alt="Gaming">
+                    <a href="#">See more</a>
+                </div>
+                <div class="category-card">
+                    <h3>Electronics</h3>
+                    <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=300" alt="Electronics">
+                    <a href="#">See more</a>
+                </div>
+                <div class="category-card">
+                    <h3>Fashion trends</h3>
+                    <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=300" alt="Fashion">
+                    <a href="#">See more</a>
+                </div>
+                <div class="category-card">
+                    <h3>Home & Kitchen</h3>
+                    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=300" alt="Home">
+                    <a href="#">See more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <h2>Today's Deals</h2>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-back-to-top">
+            <a href="#" onclick="window.scrollTo(0,0)">Back to top</a>
+        </div>
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h4>Get to Know Us</h4>
+                        <ul>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">About Amazon</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Make Money with Us</h4>
+                        <ul>
+                            <li><a href="#">Sell products on Amazon</a></li>
+                            <li><a href="#">Sell on Amazon Business</a></li>
+                            <li><a href="#">Become an Affiliate</a></li>
+                            <li><a href="#">Advertise Your Products</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Amazon Payment Products</h4>
+                        <ul>
+                            <li><a href="#">Amazon Business Card</a></li>
+                            <li><a href="#">Shop with Points</a></li>
+                            <li><a href="#">Reload Your Balance</a></li>
+                            <li><a href="#">Amazon Currency Converter</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Let Us Help You</h4>
+                        <ul>
+                            <li><a href="#">Amazon and COVID-19</a></li>
+                            <li><a href="#">Your Account</a></li>
+                            <li><a href="#">Your Orders</a></li>
+                            <li><a href="#">Shipping Rates & Policies</a></li>
+                            <li><a href="#">Returns & Replacements</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" style="width: 100px;">
+                <p>&copy; 2024 Amazon Clone. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
+
